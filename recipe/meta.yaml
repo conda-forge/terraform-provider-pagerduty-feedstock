@@ -1,10 +1,10 @@
 {% set provider= "PagerDuty" %}
-{% set version = "0.1.3" %}
+{% set version = "1.0.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "957d72efca1d79f01dc4fbc9df12ab619cbba4fe866334cbc6d930b4a7c16559" %}
+{% set sha256 = "82af865bcdf47de90eb9c491b2240ed8d237265796c643d8d81c3f5ad23e2b7b" %}
 {% set sha256_win32 = "d03ed21ce2fdcc05335a9a902f269d0449b0be34c2202cd5107264a1181ba7cf" %}
 {% set sha256_win64 = "bff44de54b640aeac7c0c1925239e3d871a0e0959518b3ccc56be46611d60bf7" %}
 
