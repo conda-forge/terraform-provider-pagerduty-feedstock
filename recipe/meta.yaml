@@ -1,12 +1,12 @@
 {% set provider= "PagerDuty" %}
-{% set version = "0.1.3" %}
+{% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "957d72efca1d79f01dc4fbc9df12ab619cbba4fe866334cbc6d930b4a7c16559" %}
-{% set sha256_win32 = "d03ed21ce2fdcc05335a9a902f269d0449b0be34c2202cd5107264a1181ba7cf" %}
-{% set sha256_win64 = "bff44de54b640aeac7c0c1925239e3d871a0e0959518b3ccc56be46611d60bf7" %}
+{% set sha256 = "c61eca4e18171f56d2e0df8c5b02af8f5d49ddc7810ad7d8db684fcde2c6c43a" %}
+{% set sha256_win32 = "4051b9ca85a265761a997230f7f5f1062d7bd9868eeebeda43ced94f0edd2296" %}
+{% set sha256_win64 = "fea1ddcdaa58777e3b0858a40f65a49226f5b500275c0a368f13917aed04e3c2" %}
 
 package:
   name: {{ name|lower }}
@@ -46,7 +46,7 @@ about:
   license: MPL 2.0
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/terraform-providers/{{ name }}
 
 extra:
   recipe-maintainers:
