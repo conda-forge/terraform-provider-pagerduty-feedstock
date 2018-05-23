@@ -1,12 +1,11 @@
-{% set provider= "PagerDuty" %}
+{% set provider = "PagerDuty" %}
 {% set version = "1.0.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
 {% set sha256 = "82af865bcdf47de90eb9c491b2240ed8d237265796c643d8d81c3f5ad23e2b7b" %}
-{% set sha256_win32 = "d03ed21ce2fdcc05335a9a902f269d0449b0be34c2202cd5107264a1181ba7cf" %}
-{% set sha256_win64 = "bff44de54b640aeac7c0c1925239e3d871a0e0959518b3ccc56be46611d60bf7" %}
+{% set sha256_win64 = "6b74696ff6dd3bc812826886c05f4e9af4bd0806be3dcb75b60b4212c2d17107" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +16,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz  # [not win]
   sha256: {{ sha256 }}  # [not win]
 
-  url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_386.zip  # [win32]
   url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
   fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: {{ sha256_win32 }}  # [win32]
   sha256: {{ sha256_win64 }}  # [win64]
 
 build:
@@ -46,7 +43,7 @@ about:
   license: MPL 2.0
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/terraform-providers/{{ name }}
 
 extra:
   recipe-maintainers:
