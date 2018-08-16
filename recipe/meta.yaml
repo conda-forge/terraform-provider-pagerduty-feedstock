@@ -1,10 +1,10 @@
 {% set provider = "PagerDuty" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "18f2f0c33b8289c224ea0e9d5b6a55f739fd006738819e01f23206667d34e02f" %}
+{% set sha256 = "6a99e748a7464b97041bc63a3549d2fa6587199003a42f798cc5e8af7c78f806" %}
 {% set sha256_win64 = "c272c8fb53cead3e471e7d48a494bda12f046c61578e104a6770e7126e8b3e4b" %}
 
 package:
@@ -20,7 +20,7 @@ source:
     sha256: {{ sha256_win64 }}  # [win64]
 
 build:
-  number: 1
+  number: 0
   script:
     - XCOPY src\github.com\terraform-providers\{{ name|lower }}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
