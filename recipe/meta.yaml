@@ -1,5 +1,5 @@
 {% set provider = "PagerDuty" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
@@ -11,10 +11,10 @@ package:
 source:
   - folder: src/github.com/terraform-providers/{{ name|lower }}
     url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
-    sha256: 44a929f0ec8317debb659546e72cccc03a5b981a291a5c8776e85ad26699250a  # [not win]
+    sha256: 0c1509ffd160817e819b319c62af0bcea623ea669308dd531698e785b5c5bdfc  # [not win]
 
     url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
-    sha256: 6a99e748a7464b97041bc63a3549d2fa6587199003a42f798cc5e8af7c78f806  # [win64]
+    sha256: 13e9885058917a3b45ff4b5a92a29f605014bab6c3909afa87eac1cd91995e22  # [win64]
 
 build:
   number: 0
