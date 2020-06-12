@@ -1,6 +1,6 @@
 {% set provider = "PagerDuty" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  sha256: bdb1e3b36523bb159a0bc5ce1b541b273b67b6778133b3c9101ead9dd163578c
+  sha256: 408f6f54eeb4bb11b1a48ab75c938f6db5c666022cda365b16921c6fdf1c3846
 
 
 build:
